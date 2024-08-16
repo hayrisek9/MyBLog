@@ -7,11 +7,13 @@ body{
     width: 100%;
     height: auto;
     min-height: 100vh;
-    background-color: #e7ecef;
+    background-color: #f1e3e4;
+
 }
 img, video{
     width: 100%;
-}a, a:active, a:link, a::before a::after{
+}
+a, a:active, a:link, a::before a::after{
     color: #121420;
     text-decoration: none;
 }
