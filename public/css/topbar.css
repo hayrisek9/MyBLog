@@ -7,6 +7,11 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+.topbar .wrapper{
+    width: 100%;
+    max-width: 1366px;
+    display: flex;
+}
 .topbar .left, .topbar .right{
     flex: 3;
     height: 100%;
@@ -70,4 +75,45 @@ cursor: pointer;
 .topbar .right .searchEngine.active input{
     opacity: 1;
 }
+
+/* ?Scroll animation */
+.topbar .wrapper{
+    opacity: 0;
+    transition: all 0.5s;
+    transform: translateY(-11px);
+}
+.topbar .wrapper.active{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.topbar .left i{
+    transition: all 0.3s;
+    transform: translateX(-19px);
+    opacity: 0;
+}
+.topbar .wrapper.active .left i{
+    transform: all 0.3s;
+    opacity: 1;
+    transform: translateX(0px);
+
+}
+.topbar .wrapper.active .left i:nth-child(2){
+transition-duration: 0.5s;
+}
+.topbar .wrapper.active .left i:nth-child(3){
+    transition-duration: 0.7s;
+}
+.topbar .wrapper.active .left i:nth-child(4){
+    transition-duration: 0.9s;
+}
+.topbar.center, .topbar.right{
+    transform: translateX(-11px) translateY(-11px);
+    transition: all 0.5s;
+    opacity: 0;
+}
+.topbar .wrapper.active.center, .topbar.wrapper.active.right{
+    transform: translateX(0px) translateY(0px);
+    opacity: 1;
+}
+
 
