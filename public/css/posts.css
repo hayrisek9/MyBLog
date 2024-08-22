@@ -1,0 +1,84 @@
+.posts{
+    flex: 9;
+    margin-bottom: 29px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 19px;
+}
+.posts .post{
+    width: calc(50% - 19px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 11px;
+    border-radius: 11px;
+    margin-bottom: 29px;
+}
+@media(max-width:1100px){
+    .posts .post{
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        padding: 11px;
+        border-radius: 11px;
+        margin-bottom: 29px;
+    }
+
+}
+.posts h1{
+    font-family: "Pacifico", cursive;
+}
+.posts img{
+    border-radius: 11px;
+    height: 301px;
+    margin-bottom: 5px;
+    object-fit: cover;
+}
+.posts p{
+    padding: 5px;
+    font-family: "Arvo", serif;
+    overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 4;
+-webkit-box-orient: vertical;
+line-height: 23px;
+}
+.posts .autorAndDate{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 31px;
+}
+.posts .autorAndDate span:nth-child(1){
+    font-family: "Dancing Script", cursive;
+    font-weight: 900;
+}
+.posts .autorAndDate span:nth-child(2){
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 700;
+    font-style: italic;
+}
+/* ?scroll anmation */
+
+.posts .post{
+    transform: translateX(-19px);
+    opacity: 0;
+    transition: all 0.5s;
+}
+.posts .post.active{
+    transform: translateX(0px);
+    opacity: 1;
+
+}
+.posts .post:nth-child(2n){
+    transition: 0.7s;
+}
+
+/* ?responsive area */
+@media (max-width: 1366px){
+    .posts.post{
+        width: 100%;
+        
+    }
+    .posts.post:nth-child(2n){
+        transition: 0.5s;
+    }
+}
