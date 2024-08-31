@@ -1,0 +1,85 @@
+.about{
+    padding: 0px 19px;
+}
+
+.about .wrapper{
+    width: 100%;
+    max-width: 1366px;
+    margin: 47px auto;
+padding: 11px;
+border: solid 1px rgba(0, 0, 0, 0.2);
+border-radius: 11px;
+display: flex;
+}
+.about .wrapper:nth-child(2n){
+ flex-direction: row-reverse;
+}
+.about .wrapper .text{
+    flex: 1;
+    padding: 5px;
+}
+.about .wrapper .text h1{
+    font-family: 'dancing Script', cursive;
+}
+.about .wrapper .text p{
+    font-family: "Josefin Sans", sans-serif;
+    padding: 11px;
+    font-size: 1.2rem;
+    line-height: 23px;
+}
+.about .wrapper .text  p::first-letter {
+    margin-left: 19px;
+    font-family: 'dancing Script', cursive;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+.about .wrapper .photo{
+    flex: 1;
+    overflow: hidden;
+    border-radius: 23px;
+}
+.about .wrapper .photo img{
+    cursor: pointer;
+    border-radius: 23px;
+transition: all 0.5s;
+
+}
+.about .wrapper .photo img:hover{
+    transform: scale(1.1);
+    
+}
+
+
+/* ?Scroll Animation */
+
+.about .wrapper {
+    opacity: 0;
+  transition: all 0.5s;
+}
+
+.about .wrapper.active {
+  opacity: 1;
+}
+.about .wrapper .text{
+    transform: translateX(-19px);
+    transition: all 0.5s;
+
+}
+.about .wrapper:nth-child(2n) .text{
+    transform: translateX(19px);
+}
+.about .wrapper.active .text{
+    transform: translateX(0px);
+}
+
+.about .wrapper .photo{
+    transform: translateX(19px);
+    transition: all 0.5s;
+
+}
+.about .wrapper:nth-child(2n) .photo{
+    transform: translateX(-19px);
+}
+.about .wrapper.active .photo{
+    transform: translateX(0px);
+}
